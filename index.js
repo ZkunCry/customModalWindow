@@ -11,6 +11,22 @@ const options = {
   animi nam aperiam 
   </p>`,
   width: `500px`,
+  footer: [
+    {
+      text: "OK",
+      type: "primary",
+      handler() {
+        console.log(`${this.type} button clicked`);
+      },
+    },
+    {
+      text: "CANCEL",
+      type: "primary",
+      handler() {
+        console.log(`${this.type} button clicked`);
+      },
+    },
+  ],
 };
 
 const modal = $.modal(options);
