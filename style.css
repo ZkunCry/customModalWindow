@@ -7,12 +7,10 @@
 }
 body {
   font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   font-size: 16px;
 }
-button {
+/* button {
   padding: 0.5rem 1rem;
   border: none;
   font-size: 0.6rem;
@@ -25,9 +23,9 @@ button {
 button:hover {
   transition: 0.5s background-color ease;
   background-color: #002fed;
-}
+} */
 
-.modal-body {
+.mmodal-body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,21 +34,22 @@ button:hover {
   left: 0;
   height: 100vh;
   width: 100%;
+  z-index: -1;
   background-color: rgba(0, 0, 0, 0);
   transition: 0.2s background-color ease;
 }
 
-.modal.active .modal-body {
+.mmodal.active .mmodal-body {
+  z-index: 100;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.modal.active .modal-content {
+.mmodal.active .mmodal-content {
   visibility: visible;
   transform: scale(1);
   opacity: 1;
 }
 
-.modal-content {
-  max-width: 600px;
+.mmodal-content {
   background-color: #fff;
   border-radius: 20px;
   padding: 1rem;
@@ -59,18 +58,18 @@ button:hover {
   transform: scale(0.2);
   transition: transform 0.2s, opacity 0.2s, visibility 0.2s;
 }
-.modal-header {
+.mmodal-header {
   display: flex;
   justify-content: space-between;
   margin: 0 0 10px 0;
 }
-.modal-inner {
+.mmodal-inner {
   margin: 0 0 10px 0;
 }
-.modal-footer {
+.mmodal-footer {
   display: flex;
   justify-content: flex-end;
 }
-.modal-footer button:first-child {
+.mmodal-footer button:first-child {
   margin-right: 10px;
 }
